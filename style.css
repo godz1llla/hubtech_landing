@@ -1010,7 +1010,133 @@ footer {
   color: var(--accent);
 }
 
+/* ===== SOCIALS ===== */
+.socials {
+  padding: 100px 8%;
+}
+
+.socials-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.socials-desc {
+  font-size: 1rem;
+  color: var(--text-mid);
+  max-width: 420px;
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.socials-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 24px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.social-card:hover {
+  background: #0f0f0f;
+  border-color: var(--border-accent);
+}
+
+.social-card:hover .social-card-arrow {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+.social-card:hover .social-card-icon {
+  color: var(--accent);
+}
+
+.social-card-icon {
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-mid);
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.social-card:hover .social-card-icon {
+  border-color: var(--border-accent);
+}
+
+.social-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.social-card-name {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.social-card-handle {
+  font-size: 12px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+.social-card-arrow {
+  font-size: 1.2rem;
+  color: var(--text-dim);
+  transition: color 0.3s, transform 0.3s;
+  margin-left: auto;
+}
+
+/* VIDEO */
+.socials-video {
+  position: relative;
+}
+
+.video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-wrap .corner-mark {
+  width: 16px;
+  height: 16px;
+  z-index: 2;
+}
+
 /* REVEAL */
+
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -1139,6 +1265,30 @@ footer {
 
   .hero-stat span {
     font-size: 10px;
+  }
+
+  /* SOCIALS */
+  .socials {
+    padding: 60px 5%;
+  }
+
+  .socials-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .socials-desc {
+    max-width: 100%;
+  }
+
+  .social-card {
+    padding: 18px 16px;
+    gap: 14px;
+  }
+
+  .social-card-icon {
+    width: 44px;
+    height: 44px;
   }
 
   /* MARQUEE */
