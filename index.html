@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HubTech — Инновационные IT-решения | Flutter & AI</title>
+    <meta name="description"
+        content="HubTech — передовые IT-решения: сайты, мобильные приложения, игры, научные проекты на Flutter & AI. Казахстан." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+
+    <!-- WebGL Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav" id="mobile-nav">
+        <button class="close-nav" aria-label="Закрыть">✕</button>
+        <a href="#hero">Главная</a>
+        <a href="#services">Услуги</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#order" class="nav-cta" style="font-size:1.5rem">Заказать</a>
+    </nav>
+
+    <!-- Navbar -->
+    <nav class="nav" id="main-nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">
+                <img src="logo-black.png" alt="HubTech" />
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#pricing">Тарифы</a></li>
+                <li><a href="#cases">Кейсы</a></li>
+            </ul>
+            <a href="#order" class="nav-cta magnetic">Заказать</a>
+            <div class="burger" id="burger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="hero">
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Flutter &amp; AI · Казахстан
+            </div>
+            <h1 class="hero-title">
+                <span class="line"><span class="word">Инновационные</span></span>
+                <span class="line"><span class="word gradient-text kinetic-letters">IT-решения</span></span>
+            </h1>
+            <p class="hero-subtitle">
+                Превращаем смелые идеи в цифровые продукты — быстро, красиво и с душой. Мы строим будущее прямо сейчас.
+            </p>
+            <div class="hero-actions">
+                <a href="#order" class="btn-primary magnetic">
+                    <span>Начать проект</span>
+                    <span>→</span>
+                </a>
+                <a href="#cases" class="btn-secondary">
+                    Смотреть кейсы
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-num" data-target="50" data-suffix="+">0</div>
+                    <div class="stat-label">Проектов сдано</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="30" data-suffix="+">0</div>
+                    <div class="stat-label">Клиентов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="4" data-suffix="">0</div>
+                    <div class="stat-label">Года опыта</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="100" data-suffix="%">0</div>
+                    <div class="stat-label">Довольных заказчиков</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <span class="marquee-item">Flutter</span>
+            <span class="marquee-item">Web Development</span>
+            <span class="marquee-item">Mobile Apps</span>
+            <span class="marquee-item">Artificial Intelligence</span>
+            <span class="marquee-item">Game Dev</span>
+            <span class="marquee-item">UI/UX Design</span>
+            <span class="marquee-item">CRM Systems</span>
+            <span class="marquee-item">Telegram Bots</span>
+            <span class="marquee-item">Flutter</span>
+            <span class="marquee-item">Web Development</span>
+            <span class="marquee-item">Mobile Apps</span>
+            <span class="marquee-item">Artificial Intelligence</span>
+            <span class="marquee-item">Game Dev</span>
+            <span class="marquee-item">UI/UX Design</span>
+            <span class="marquee-item">CRM Systems</span>
+            <span class="marquee-item">Telegram Bots</span>
+        </div>
+    </div>
+
+    <!-- ═══ SERVICES ═══ -->
+    <section class="services" id="services">
+        <div class="services-header reveal">
+            <div class="section-label">Что мы делаем</div>
+            <h2 class="section-title">Полный спектр<br /><span class="gradient-text">цифровых услуг</span></h2>
+            <p class="section-sub">Разрабатываем технологические продукты от идеи до запуска — быстро, качественно и на
+                современном стеке.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal reveal-delay-1">
+                <div class="service-icon">🌐</div>
+                <h3>Создание сайтов</h3>
+                <p>Разрабатываем сайты любой сложности — от лендингов до CMS-платформ и корпоративных порталов.</p>
+                <div class="service-arrow">Узнать больше →</div>
+            </div>
+            <div class="service-card reveal reveal-delay-2">
+                <div class="service-icon">📱</div>
+                <h3>Мобильные приложения</h3>
+                <p>Создаём кросс-платформенные приложения на Flutter для iOS и Android с высоким UX.</p>
+                <div class="service-arrow">Узнать больше →</div>
+            </div>
+            <div class="service-card reveal reveal-delay-3">
+                <div class="service-icon">🎮</div>
+                <h3>Разработка игр</h3>
+                <p>Игровые проекты для мобильных и ПК-платформ: от детских обучалок до полноценных RPG.</p>
+                <div class="service-arrow">Узнать больше →</div>
+            </div>
+            <div class="service-card reveal reveal-delay-4">
+                <div class="service-icon">🤖</div>
+                <h3>AI-ассистенты</h3>
+                <p>Встраиваем искусственный интеллект в продукты: чат-боты, рекомендации, медицинские боты.</p>
+                <div class="service-arrow">Узнать больше →</div>
+            </div>
+            <div class="service-card reveal reveal-delay-1">
+                <div class="service-icon">💼</div>
+                <h3>CRM-системы</h3>
+                <p>Разрабатываем системы управления бизнесом и персоналом под конкретные задачи компании.</p>
+                <div class="service-arrow">Узнать больше →</div>
+            </div>
+            <div class="service-card reveal reveal-delay-2">
+                <div class="service-icon">🔬</div>
+                <h3>Научные проекты</h3>
+                <p>Создаём образовательные платформы, научные порталы и системы учёта достижений.</p>
+                <div class="service-arrow">Узнать больше →</div>
+            </div>
+            <div class="service-card reveal reveal-delay-3">
+                <div class="service-icon">💬</div>
+                <h3>Чат-боты</h3>
+                <p>Telegram-боты и Web-боты для автоматизации поддержки, продаж и бизнес-процессов.</p>
+                <div class="service-arrow">Узнать больше →</div>
+            </div>
+            <div class="service-card reveal reveal-delay-4">
+                <div class="service-icon">📊</div>
+                <h3>Аналитика и данные</h3>
+                <p>Системы управления и визуализации данных, дашборды и BI-инструменты для принятия решений.</p>
+                <div class="service-arrow">Узнать больше →</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PRICING ═══ -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-header reveal">
+            <div class="section-label">Тарифные планы</div>
+            <h2 class="section-title">Прозрачные<br /><span class="gradient-text">цены</span></h2>
+            <p class="section-sub" style="margin:0 auto">Выберите подходящий тариф или напишите нам — разработаем
+                индивидуальное предложение.</p>
+            <div class="pricing-tabs">
+                <button class="tab-btn active" data-tab="web">Сайты</button>
+                <button class="tab-btn" data-tab="apps">Приложения</button>
+                <button class="tab-btn" data-tab="ai">AI & Боты</button>
+            </div>
+        </div>
+
+        <!-- Web Pricing -->
+        <div class="pricing-grid pricing-panel" data-panel="web">
+            <div class="pricing-card reveal reveal-delay-1">
+                <div class="pricing-name">Базовый</div>
+                <div class="pricing-price">50 000 <span>₸</span></div>
+                <div class="pricing-from">от</div>
+                <ul class="pricing-features">
+                    <li>Простой лендинг</li>
+                    <li>До 5 страниц</li>
+                    <li>Базовая SEO-оптимизация</li>
+                    <li>Поддержка 1 месяц</li>
+                </ul>
+                <button class="pricing-btn"
+                    onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Выбрать</button>
+            </div>
+            <div class="pricing-card featured reveal reveal-delay-2">
+                <div class="pricing-name">Стандарт</div>
+                <div class="pricing-price">150 000 <span>₸</span></div>
+                <div class="pricing-from">от</div>
+                <ul class="pricing-features">
+                    <li>Многостраничный сайт</li>
+                    <li>До 20 страниц</li>
+                    <li>Расширенная SEO-оптимизация</li>
+                    <li>Интеграция CMS</li>
+                    <li>Поддержка 3 месяца</li>
+                </ul>
+                <button class="pricing-btn"
+                    onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Выбрать</button>
+            </div>
+            <div class="pricing-card reveal reveal-delay-3">
+                <div class="pricing-name">Премиум</div>
+                <div class="pricing-price">300 000 <span>₸</span></div>
+                <div class="pricing-from">от</div>
+                <ul class="pricing-features">
+                    <li>Сложный веб-проект</li>
+                    <li>Неограниченное кол-во страниц</li>
+                    <li>Полная SEO-оптимизация</li>
+                    <li>Интеграция CRM и API</li>
+                    <li>Поддержка 6 месяцев</li>
+                </ul>
+                <button class="pricing-btn"
+                    onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Выбрать</button>
+            </div>
+        </div>
+
+        <!-- Apps Pricing -->
+        <div class="pricing-grid pricing-panel" data-panel="apps" style="display:none">
+            <div class="pricing-card reveal reveal-delay-1">
+                <div class="pricing-name">Мобильное приложение</div>
+                <div class="pricing-price">200 000 <span>₸</span></div>
+                <div class="pricing-from">от</div>
+                <ul class="pricing-features">
+                    <li>Простое приложение (до 10 экранов)</li>
+                    <li>Android или iOS</li>
+                    <li>Базовый UI/UX дизайн</li>
+                    <li>Поддержка 1 месяц</li>
+                </ul>
+                <button class="pricing-btn"
+                    onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Выбрать</button>
+            </div>
+            <div class="pricing-card featured reveal reveal-delay-2">
+                <div class="pricing-name">Разработка игр</div>
+                <div class="pricing-price">500 000 <span>₸</span></div>
+                <div class="pricing-from">от</div>
+                <ul class="pricing-features">
+                    <li>Игра среднего уровня сложности</li>
+                    <li>Кроссплатформенная (PC + Mobile)</li>
+                    <li>Геймдизайн, анимация, звук</li>
+                    <li>Поддержка 1 месяц</li>
+                </ul>
+                <button class="pricing-btn"
+                    onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Выбрать</button>
+            </div>
+        </div>
+
+        <!-- AI Pricing -->
+        <div class="pricing-grid pricing-panel" data-panel="ai" style="display:none">
+            <div class="pricing-card reveal reveal-delay-1">
+                <div class="pricing-name">Чат-бот</div>
+                <div class="pricing-price">60 000 <span>₸</span></div>
+                <div class="pricing-from">от</div>
+                <ul class="pricing-features">
+                    <li>Telegram / Web бот</li>
+                    <li>До 20 сценариев</li>
+                    <li>Базовая SEO-оптимизация</li>
+                    <li>Поддержка 1 месяц</li>
+                </ul>
+                <button class="pricing-btn"
+                    onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Выбрать</button>
+            </div>
+            <div class="pricing-card reveal reveal-delay-2">
+                <div class="pricing-name">CRM-система</div>
+                <div class="pricing-price">70 000 <span>₸</span></div>
+                <div class="pricing-from">от</div>
+                <ul class="pricing-features">
+                    <li>Управление клиентами</li>
+                    <li>Аналитика и отчёты</li>
+                    <li>Интеграция CMS</li>
+                    <li>Поддержка 3 месяца</li>
+                </ul>
+                <button class="pricing-btn"
+                    onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Выбрать</button>
+            </div>
+            <div class="pricing-card featured reveal reveal-delay-3">
+                <div class="pricing-name">ИИ-ассистент</div>
+                <div class="pricing-price">200 000 <span>₸</span></div>
+                <div class="pricing-from">от</div>
+                <ul class="pricing-features">
+                    <li>Интеллектуальный ИИ-продукт</li>
+                    <li>Интеграция LLM / RAG</li>
+                    <li>CRM и API интеграция</li>
+                    <li>Поддержка 6 месяцев</li>
+                </ul>
+                <button class="pricing-btn"
+                    onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Выбрать</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CASES ═══ -->
+    <section class="cases" id="cases">
+        <div class="cases-header reveal">
+            <div class="section-label">Наши кейсы</div>
+            <h2 class="section-title">Реальные<br /><span class="gradient-text">продукты</span></h2>
+            <p class="section-sub">Более 50 проектов — от образовательных платформ до корпоративных систем.</p>
+        </div>
+        <div class="cases-categories reveal">
+            <button class="cat-btn active" data-cat="all">Все проекты</button>
+            <button class="cat-btn" data-cat="edu">Образование</button>
+            <button class="cat-btn" data-cat="corp">Корпоративные</button>
+            <button class="cat-btn" data-cat="other">Другие</button>
+        </div>
+        <div class="cases-grid">
+            <!-- Education -->
+            <div class="case-card reveal reveal-delay-1" data-cat="edu">
+                <span class="case-tag">Образование</span>
+                <span class="case-emoji">📚</span>
+                <h3>vestnik.ouk.kz</h3>
+                <p>Научный журнал на базе Кызылординского открытого университета для публикации исследовательских работ.
+                </p>
+            </div>
+            <div class="case-card reveal reveal-delay-2" data-cat="edu">
+                <span class="case-tag">Образование</span>
+                <span class="case-emoji">🏆</span>
+                <h3>ped-achievements.kz</h3>
+                <p>Платформа систематизации достижений педагогов и профессиональных навыков.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-3" data-cat="edu">
+                <span class="case-tag">Мобильное</span>
+                <span class="case-emoji">📖</span>
+                <h3>TilТұлға</h3>
+                <p>Образовательное приложение для формирования языковой личности у младших школьников.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-4" data-cat="edu">
+                <span class="case-tag">Игра</span>
+                <span class="case-emoji">🎮</span>
+                <h3>Learningcraft</h3>
+                <p>Обучающая игра для детей 3–7 лет с математическими и логическими задачами.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-1" data-cat="edu">
+                <span class="case-tag">Игра</span>
+                <span class="case-emoji">🔢</span>
+                <h3>MathEasy</h3>
+                <p>Мобильная игра для детей 6–8 лет, делающая математику лёгкой и увлекательной.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-2" data-cat="edu">
+                <span class="case-tag">Веб-платформа</span>
+                <span class="case-emoji">🧠</span>
+                <h3>psyhology.ouk.kz</h3>
+                <p>Платформа психологической поддержки студентов Кызылординского открытого университета.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-3" data-cat="edu">
+                <span class="case-tag">LMS</span>
+                <span class="case-emoji">🎓</span>
+                <h3>online.ouk.kz</h3>
+                <p>LMS-платформа для дистанционного обучения Кызылординского открытого университета.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-4" data-cat="edu">
+                <span class="case-tag">CMS-сайт</span>
+                <span class="case-emoji">🏭</span>
+                <h3>agrotekh.edu.kz</h3>
+                <p>CMS-сайт для Кызылординского политехнического высшего колледжа им. Абдукаримова.</p>
+            </div>
+            <!-- Corporate -->
+            <div class="case-card reveal reveal-delay-1" data-cat="corp">
+                <span class="case-tag">Корпоративное</span>
+                <span class="case-emoji">👥</span>
+                <h3>SmartKyzmet</h3>
+                <p>Локальная платформа мониторинга персонала для государственных учреждений.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-2" data-cat="corp">
+                <span class="case-tag">Продуктивность</span>
+                <span class="case-emoji">⏰</span>
+                <h3>StoickTrack</h3>
+                <p>Веб + мобильная платформа для управления временем, привычками и здоровьем.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-3" data-cat="corp">
+                <span class="case-tag">Маркетплейс</span>
+                <span class="case-emoji">🤝</span>
+                <h3>birbilim.kz</h3>
+                <p>Платформа для размещения заказов и предложений от исполнителей по всему Казахстану.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-4" data-cat="corp">
+                <span class="case-tag">Лендинг</span>
+                <span class="case-emoji">🧈</span>
+                <h3>tabigi-mai.kz</h3>
+                <p>Landing page для натуральной молочной продукции "Табиги май".</p>
+            </div>
+            <!-- Other -->
+            <div class="case-card reveal reveal-delay-1" data-cat="other">
+                <span class="case-tag">Игра</span>
+                <span class="case-emoji">⚔️</span>
+                <h3>Саяхат</h3>
+                <p>RPG с открытым миром, погружающая в историю казахских батыров и эпическую мифологию степи.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-2" data-cat="other">
+                <span class="case-tag">Инкубатор</span>
+                <span class="case-emoji">🚀</span>
+                <h3>Kyzylorda Hub</h3>
+                <p>Первый Кызылординский бизнес-инкубатор — центр развития стартапов региона.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-3" data-cat="other">
+                <span class="case-tag">Безопасность</span>
+                <span class="case-emoji">🛡️</span>
+                <h3>Karzhy-Kalkan.kz</h3>
+                <p>Комплексная система финансовой защиты для крупного финансового учреждения Казахстана.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-4" data-cat="other">
+                <span class="case-tag">AI-бот</span>
+                <span class="case-emoji">🤖</span>
+                <h3>Korkyt Ata AI</h3>
+                <p>ИИ-ассистент для образовательных целей в трёх версиях с расширенным функционалом.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-1" data-cat="other">
+                <span class="case-tag">Медицина</span>
+                <span class="case-emoji">🏥</span>
+                <h3>AI Medical Bot</h3>
+                <p>Telegram-бот с ИИ для медицинских консультаций и первичной диагностики.</p>
+            </div>
+            <div class="case-card reveal reveal-delay-2" data-cat="other">
+                <span class="case-tag">Экология</span>
+                <span class="case-emoji">🌱</span>
+                <h3>Eco Qogam</h3>
+                <p>Экологический проект для устойчивого развития общества и зелёных инициатив.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ ORDER FORM ═══ -->
+    <section class="order" id="order">
+        <div class="order-inner reveal">
+            <div class="section-label">Связаться с нами</div>
+            <h2 class="section-title">Давайте создадим<br /><span class="gradient-text">что-то великое</span></h2>
+            <p class="section-sub">Оставьте заявку и мы свяжемся с вами в течение 24 часов для обсуждения вашего
+                проекта.</p>
+            <div class="order-form">
+                <form id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="order-type">Тип заказа</label>
+                            <select id="order-type" name="type" required>
+                                <option value="">Выберите тип...</option>
+                                <option>Создание сайта</option>
+                                <option>Мобильное приложение</option>
+                                <option>Разработка игры</option>
+                                <option>CRM-система</option>
+                                <option>Чат-бот / AI-ассистент</option>
+                                <option>Научный проект</option>
+                                <option>Другое</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="order-tariff">Тариф</label>
+                            <select id="order-tariff" name="tariff">
+                                <option value="">Выберите тариф...</option>
+                                <option>Базовый (от 50 000 ₸)</option>
+                                <option>Стандарт (от 150 000 ₸)</option>
+                                <option>Премиум (от 300 000 ₸)</option>
+                                <option>Индивидуальный</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="order-name">Ваше имя</label>
+                            <input type="text" id="order-name" name="name" placeholder="Иван Иванов" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="order-phone">Ваш телефон</label>
+                            <input type="tel" id="order-phone" name="phone" placeholder="+7 (___) ___ __ __" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-desc">Описание проекта</label>
+                        <textarea id="order-desc" name="description"
+                            placeholder="Расскажите о вашей идее, задаче или проблеме..." required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit magnetic">Отправить заявку →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+        <div class="footer-inner">
+            <a href="#hero" class="footer-logo">
+                <img src="logo-black.png" alt="HubTech" />
+            </a>
+            <nav style="display:flex;gap:28px;flex-wrap:wrap">
+                <a href="#services"
+                    style="color:var(--text-muted);text-decoration:none;font-size:14px;transition:color .3s"
+                    onmouseover="this.style.color='var(--accent-1)'"
+                    onmouseout="this.style.color='var(--text-muted)'">Услуги</a>
+                <a href="#pricing"
+                    style="color:var(--text-muted);text-decoration:none;font-size:14px;transition:color .3s"
+                    onmouseover="this.style.color='var(--accent-1)'"
+                    onmouseout="this.style.color='var(--text-muted)'">Тарифы</a>
+                <a href="#cases"
+                    style="color:var(--text-muted);text-decoration:none;font-size:14px;transition:color .3s"
+                    onmouseover="this.style.color='var(--accent-1)'"
+                    onmouseout="this.style.color='var(--text-muted)'">Кейсы</a>
+                <a href="#order"
+                    style="color:var(--text-muted);text-decoration:none;font-size:14px;transition:color .3s"
+                    onmouseover="this.style.color='var(--accent-1)'"
+                    onmouseout="this.style.color='var(--text-muted)'">Контакты</a>
+            </nav>
+            <div class="footer-socials">
+                <a href="#" class="social-link" aria-label="Telegram">✈</a>
+                <a href="#" class="social-link" aria-label="Instagram">◎</a>
+                <a href="#" class="social-link" aria-label="GitHub">⌥</a>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 HubTech. Все права защищены. Разработано с ❤️ в Казахстане.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
