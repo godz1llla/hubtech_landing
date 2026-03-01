@@ -479,6 +479,59 @@ nav.scrolled {
 /* ===== SERVICES ===== */
 .services {
   padding: 100px 8%;
+  position: relative;
+}
+
+/* Floating cat mascot */
+.float-cat {
+  position: absolute;
+  top: -65px;
+  right: -10px;
+  z-index: 10;
+  pointer-events: auto;
+  animation: catBob 3.5s ease-in-out infinite;
+  cursor: pointer;
+  filter: drop-shadow(0 8px 24px rgba(255, 93, 34, 0.15));
+  transition: filter 0.3s;
+}
+
+.float-cat:hover {
+  animation-play-state: paused;
+  filter: drop-shadow(0 12px 32px rgba(255, 93, 34, 0.35));
+}
+
+.float-cat img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.float-cat:hover img {
+  transform: scale(1.15) rotate(-3deg);
+}
+
+@keyframes catBob {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+
+  50% {
+    transform: translateY(-4px) rotate(0deg);
+  }
+
+  75% {
+    transform: translateY(-12px) rotate(-2deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 }
 
 .section-label {
@@ -526,6 +579,7 @@ nav.scrolled {
   background: var(--border);
   gap: 1px;
   border: 1px solid var(--border);
+  position: relative;
 }
 
 .service-item {
@@ -1302,6 +1356,10 @@ footer {
   }
 
   /* SECTIONS */
+  .float-cat {
+    display: none;
+  }
+
   .services,
   .pricing,
   .cases,
