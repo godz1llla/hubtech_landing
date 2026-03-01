@@ -1357,7 +1357,13 @@ footer {
 
   /* SECTIONS */
   .float-cat {
-    display: none;
+    top: -50px;
+    right: -5px;
+  }
+
+  .float-cat img {
+    width: 75px;
+    height: 75px;
   }
 
   .services,
