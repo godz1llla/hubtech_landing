@@ -95,29 +95,44 @@ gsap.from('.hero-content > *', {
 });
 
 // Service cards
-gsap.from('.service-item', {
-    scrollTrigger: { trigger: '.services-grid', start: 'top 80%' },
-    opacity: 0, y: 40, duration: 0.7, stagger: 0.15, ease: 'power3.out'
-});
+gsap.fromTo('.service-item',
+    { opacity: 0, y: 40 },
+    {
+        opacity: 1, y: 0, duration: 0.7, stagger: 0.15, ease: 'power3.out',
+        scrollTrigger: { trigger: '.services-grid', start: 'top 80%' }
+    }
+);
 
-// Pricing cards
-gsap.from('.pricing-card', {
-    scrollTrigger: { trigger: '.pricing-grid', start: 'top 80%' },
-    opacity: 0, y: 40, duration: 0.7, stagger: 0.12, ease: 'power3.out'
+// Pricing cards — use '.pricing-panel:not([style*="none"]) .pricing-card' to only hit visible panel
+document.querySelectorAll('.pricing-card').forEach(card => {
+    card.style.opacity = '1'; // ensure visible immediately as fallback
 });
+gsap.fromTo('.pricing-panel:not([style*="none"]) .pricing-card',
+    { opacity: 0, y: 40 },
+    {
+        opacity: 1, y: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out',
+        scrollTrigger: { trigger: '.pricing', start: 'top 60%' }
+    }
+);
 
 // Case cards
-gsap.from('.case-card', {
-    scrollTrigger: { trigger: '.cases-grid', start: 'top 80%' },
-    opacity: 0, y: 30, duration: 0.6, stagger: 0.08, ease: 'power2.out'
-});
+gsap.fromTo('.case-card',
+    { opacity: 0, y: 30 },
+    {
+        opacity: 1, y: 0, duration: 0.6, stagger: 0.08, ease: 'power2.out',
+        scrollTrigger: { trigger: '.cases-grid', start: 'top 80%' }
+    }
+);
 
 // Section titles
 gsap.utils.toArray('.section-title').forEach(el => {
-    gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 85%' },
-        opacity: 0, y: 50, duration: 1, ease: 'expo.out'
-    });
+    gsap.fromTo(el,
+        { opacity: 0, y: 50 },
+        {
+            opacity: 1, y: 0, duration: 1, ease: 'expo.out',
+            scrollTrigger: { trigger: el, start: 'top 85%' }
+        }
+    );
 });
 
 // Hero parallax
