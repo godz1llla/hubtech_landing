@@ -103,6 +103,15 @@ gsap.fromTo('.service-item',
     }
 );
 
+// Team cards
+gsap.fromTo('.team-card',
+    { opacity: 0, y: 40 },
+    {
+        opacity: 1, y: 0, duration: 0.7, stagger: 0.15, ease: 'power3.out',
+        scrollTrigger: { trigger: '.team-grid', start: 'top 80%' }
+    }
+);
+
 // Pricing cards — use '.pricing-panel:not([style*="none"]) .pricing-card' to only hit visible panel
 document.querySelectorAll('.pricing-card').forEach(card => {
     card.style.opacity = '1'; // ensure visible immediately as fallback
@@ -215,4 +224,31 @@ form?.addEventListener('submit', e => {
         btn.style.background = ''; btn.style.color = '';
         form.reset();
     }, 3000);
+});
+
+// ── Team Slider (Swiper) ───────────────────────────────────
+new Swiper('.team-slider', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.team-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.team-nav-next',
+        prevEl: '.team-nav-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 3,
+        }
+    }
 });
